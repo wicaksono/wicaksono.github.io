@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigih Niko Wicaksono</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        @page {
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .job-entry>div,
+        .job-entry>ul>li,
+        .early-job-entry>div>div,
+        .skill-entry {
+            page-break-inside: avoid;
+        }
+
+        @media print {
+            body {
+                background: white;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .container-print,
+            .container-print::before,
+            .container-print::after {
+                border-radius: 0 !important;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .page-break {
+                break-before: page;
+                page-break-before: always;
+            }
+
+            .shadow-xl {
+                box-shadow: none;
+            }
+
+            .container-print {
+                box-shadow: none !important;
+            }
+
+            .container-print {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: stretch !important;
+                background: linear-gradient(to right, #0f172a 33.33%, #ffffff 33.33%) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            aside {
+                align-items: stretch !important;
+                width: 33.33% !important;
+                flex: 0 0 33.33% !important;
+            }
+
+            main {
+                width: 66.67% !important;
+                flex: 0 0 66.67% !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 py-8 min-h-screen">
+
+    <!-- Print Button -->
+    <div class="fixed bottom-6 right-6 no-print z-50">
+        <button onclick="window.print()"
+            class="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-full shadow-lg flex items-center gap-2 transition-all transform hover:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            Save as PDF
+        </button>
+    </div>
+
+    <!-- Main CV Container -->
+    <div
+        class="container-print max-w-5xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden flex flex-col md:flex-row">
+
+        <!-- Sidebar (Left Column) -->
+        <aside class="w-full md:w-1/3 bg-slate-900 text-slate-300 p-8 flex flex-col gap-8">
+
+            <!-- Header -->
+            <div class="flex flex-col items-center text-center">
+                <img src="https://wicaksono.github.io/me.jpg" alt="Gigih Niko Wicaksono"
+                    class="w-28 h-28 rounded-full object-cover mx-auto mb-4 shadow-lg ring-2 ring-blue-400/60">
+                <h1 class="text-3xl font-bold text-white tracking-tight leading-tight">
+                    Gigih Niko<br><span class="text-blue-400">Wicaksono</span>
+                </h1>
+                <p class="text-lg font-medium text-slate-400 mt-2">Software Engineer</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="flex flex-col gap-3 text-sm">
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Depok, Jawa Barat, ID</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span>+6281313050507</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <a href="mailto:gniko.wicaksono@gmail.com"
+                        class="hover:text-white transition-colors">gniko.wicaksono@gmail.com</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                    <a href="https://linkedin.com/in/niko-wicaksono"
+                        class="hover:text-white transition">in/niko-wicaksono</a>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="flex flex-col gap-6">
+                <div class="skill-entry">
+                    <h3
+                        class="text-white font-bold uppercase tracking-wider text-sm border-b border-slate-700 pb-2 mb-3 mt-2">
+                        AI & ML</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Python</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">OpenCV</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Yolo</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Roboflow</span>
+                    </div>
+                </div>
+                <div class="skill-entry">
+                    <h3
+                        class="text-white font-bold uppercase tracking-wider text-sm border-b border-slate-700 pb-2 mb-3 mt-2">
+                        Backend & Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Java</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Kotlin</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Python</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">TypeScript</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">PHP</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Spring
+                            Boot</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Web
+                            Socket</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Hibernate</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Kubernetes</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Docker</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Podman</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">AWS</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">GCP</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">DO</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">PostgreSQL</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">MySQL</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">RabbitMQ</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Kafka</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">MinIO</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">React</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Yii
+                            1/2</span>
+                    </div>
+                </div>
+                <div class="skill-entry">
+                    <h3
+                        class="text-white font-bold uppercase tracking-wider text-sm border-b border-slate-700 pb-2 mb-3 mt-2">
+                        Desktop & Embedded</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">ASM
+                            (GAS)</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">C/C++</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">C#</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Java</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Qt</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">WPF</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">wxWidgets</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">AVR</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">STM32</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">ESP32</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">MSP430</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">NVIDIA
+                            Jetson</span>
+                    </div>
+                </div>
+                <div class="skill-entry">
+                    <h3
+                        class="text-white font-bold uppercase tracking-wider text-sm border-b border-slate-700 pb-2 mb-3 mt-2">
+                        DevOps & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">GitLab
+                            CI</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">GitHub
+                            Actions</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">BitBucket
+                            Pipelines</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">GDB</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Make</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">CMake</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">QMake</span>
+                        <span
+                            class="px-2 py-1 bg-slate-800 rounded text-xs font-mono text-blue-200 border border-slate-700">Gradle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h3
+                    class="text-white font-bold uppercase tracking-wider text-sm border-b border-slate-700 pb-2 mb-3 mt-2">
+                    Education</h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="font-bold text-white text-sm">B.Comp.Sc.</p>
+                        <p class="text-xs text-slate-400">Universitas Pelita Bangsa</p>
+                        <p class="text-xs text-slate-500">2010 – 2012</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white text-sm">B.Comp.Sc.</p>
+                        <p class="text-xs text-slate-400">Universitas Gunadarma</p>
+                        <p class="text-xs text-slate-500">2006 – 2008 (not finish)</p>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Main Content (Right Column) -->
+        <main class="w-full md:w-2/3 p-8 md:p-12">
+
+            <!-- Summary -->
+            <section class="mb-10">
+                <h2
+                    class="text-xl font-bold text-slate-900 border-l-4 border-blue-600 pl-3 mb-4 uppercase tracking-wide">
+                    Professional Summary</h2>
+                <p class="text-slate-600 leading-relaxed text-sm">
+                    Versatile Software Engineer with over 15 years of experience spanning Full Stack Web Development,
+                    Backend Microservices, and Embedded Systems. Expert in building scalable architectures using
+                    Java/Spring Boot and Kotlin, as well as high-performance desktop and embedded applications using
+                    C/C++. Proven track record in designing complex systems—from military flight simulations to
+                    multi-tenant building management systems.
+                </p>
+            </section>
+
+            <!-- Experience -->
+            <section>
+                <h2
+                    class="text-xl font-bold text-slate-900 border-l-4 border-blue-600 pl-3 mb-6 uppercase tracking-wide">
+                    Experience</h2>
+
+                <div class="relative border-l-2 border-slate-200 space-y-8">
+
+                    <div class="relative pl-8 job-entry">
+                        <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-blue-600 border-2 border-white">
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Senior Software Engineer</h3>
+                            <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">Dec 2022 –
+                                Present</span>
+                        </div>
+                        <div class="text-sm font-semibold text-slate-500 mb-3">Six Sense Technology Pte. Ltd.</div>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-slate-600">
+                            <li><strong>Designed and implemented a large-scale, multi-tenant backend platform</strong>
+                                supporting Administration, Resident Apps, Guard Kiosk, Visitor Kiosk, Terminal, and
+                                Camera Tracker systems (Spring Boot – Java/Kotlin, Kubernetes (DOKS), RabbitMQ,
+                                PostgreSQL, MongoDB).</li>
+                            <li><strong>Architected and developed a multi-tenant administration and building management
+                                    dashboard</strong>, enabling secure, role-based access for different organizations
+                                (React, TypeScript).</li>
+                            <li><strong>Designed and implemented a payment service</strong> and integrated with
+                                <strong>Standard Chartered Bank (Straight2Bank)</strong> for secure transaction
+                                processing (Java, Spring).
+                            </li>
+                            <li><strong>Built a real-time live image capture and distribution system</strong> using
+                                WebSockets, with load distributed via RabbitMQ to multiple consumers (Python, Java,
+                                Spring, WebSocket, RabbitMQ).</li>
+                            <li><strong>Designed and delivered minimum viable products (MVPs)</strong> for <strong>Guard
+                                    Kiosk and Visitor Kiosk applications</strong> (Native Android).</li>
+                            <li><strong>Architected and implemented a video intercom system</strong> for visitor kiosks,
+                                supporting real-time audio/video communication (Spring, RabbitMQ, WebSocket, WebRTC,
+                                coTURN).</li>
+                            <li><strong>Designed and implemented a face recognition service API</strong> with optimized
+                                processing pipelines for high-throughput environments (Java, Spring, RabbitMQ, MinIO,
+                                OpenCV).</li>
+                            <li><strong>Designed and implemented visitor access control and QR code validation
+                                    services</strong>, integrating seamlessly with kiosk and resident applications.</li>
+                            <li><strong>Designed and implemented an overtime parking reporting service</strong> to
+                                support operational and billing workflows (Kotlin, Spring).</li>
+                            <li><strong>Built a multi-channel notification service</strong> supporting <strong>Email,
+                                    SMS, and WhatsApp</strong> messaging (Java, Spring, Twilio).</li>
+                            <li><strong>Designed and implemented an Automatic Number Plate Recognition (ANPR)
+                                    system</strong> to detect vehicle entry/exit, track parking locations, and trigger
+                                role-based actions across multiple camera feeds (Python, OpenCV, YOLO, NVIDIA CUDA,
+                                Jetson).</li>
+                            <li><strong>Designed and implemented a Virtual Patrol system</strong> enabling remote
+                                security agents to perform patrols based on schedules defined by building management.
+                                The system allows administrators to <strong>create patrol routes, define patrol points,
+                                    and draw inspection areas directly on CCTV live streams</strong>, while patrollers
+                                can review checkpoints and <strong>answer patrol questions</strong> to ensure compliance
+                                and auditability.</li>
+                            <li><strong>Currently enhancing ANPR capabilities</strong> to classify vehicles by model,
+                                color, and type, improving accuracy and automation.</li>
+                            <li><strong>Produced API documentation and UI mockups</strong> for Resident, Guard, and
+                                Visitor applications to support mobile engineers and cross-team collaboration.</li>
+                            <li><strong>Implemented CI/CD pipelines</strong> for microservices and kiosk applications
+                                using <strong>Bitbucket Pipelines and GitHub Actions</strong>, improving deployment
+                                reliability and release speed.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 job-entry">
+                        <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-slate-300 border-2 border-white">
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Senior Software Engineer</h3>
+                            <span class="text-xs font-semibold text-blue-500 bg-slate-100 px-2 py-1 rounded">Aug 2024 –
+                                Present</span>
+                        </div>
+                        <div class="text-sm font-semibold text-slate-500 mb-3">PT Omnibus Inti Teknologi</div>
+                        <span class="font-semibold text-slate-800 text-sm">IGRS Project</span>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-slate-600">
+                            <li>Collaborated with stakeholders to translate regulatory and business requirements into
+                                technical architecture.</li>
+                            <li>Design and implement Backend APIs using <strong>Kotlin, Spring Boot, and
+                                    PostgreSQL</strong>.</li>
+                            <li>Designed a custom scripting engine that enables runtime customization of REST API
+                                interactions, allowing business logic changes without modifying or redeploying core
+                                services.</li>
+                            <li>Integrate with BSrE for signing process.</li>
+                        </ul>
+                        <span class="font-semibold text-slate-800 text-sm">Dashboard Project</span>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-slate-600">
+                            <li>Collaborated with stakeholders to translate regulatory and business requirements into
+                                technical architecture.</li>
+                            <li>Developed a cross-platform NDA Dashboard (C++/wxWidgets) featuring USB secure dongle
+                                authentication and user management.</li>
+                            <li>Built a custom 2D world map rendering engine for visual data representation.</li>
+                            <li>Developed hex data viewers for low-level inspection and integrated audio players with
+                                playback control.</li>
+                            <li>Designed client-server large data synchronization.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 job-entry">
+                        <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-slate-300 border-2 border-white">
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Full Stack & Embedded Engineer</h3>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-1 rounded">Aug 2022 –
+                                Dec 2022</span>
+                        </div>
+                        <div class="text-sm font-semibold text-slate-500 mb-3">Freelance (Project: PLN GFD)</div>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-slate-600">
+                            <li>Designed ultra-low-power IoT devices using <strong>C and MSP430</strong>.</li>
+                            <li>Built administration dashboards for device monitoring using Spring Boot and React
+                                (TypeScript).</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 job-entry">
+                        <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-slate-300 border-2 border-white">
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                            <h3 class="text-lg font-bold text-slate-800">Lead Software Engineer</h3>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-1 rounded">Jun 2018 –
+                                Aug 2022</span>
+                        </div>
+                        <div class="text-sm font-semibold text-slate-500 mb-3">PT Putra Mandira / PT Teknologi Rekatama
+                            Solusi</div>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-slate-600">
+                            <li><strong>Air Combat Maneuvering Instrumentation (Sukhoi 27/30):</strong> Designed Ground
+                                Control Systems (C++/wxWidgets) for inflight telemetry and debriefing. Developed 2D/3D
+                                visualizations in Unity 3D.</li>
+                            <li><strong>Embedded Systems:</strong> Designed secure, anti-collision radio data exchange
+                                algorithms and flight data recording (USB MSC) on STM32.</li>
+                            <li><strong>Secure Chat (BIN):</strong> Led backend (Java/Spring/MinIO/Redis) and mobile
+                                engineering teams for secure communication apps.</li>
+                            <li><strong>Rudal Nasional:</strong> Developed Flight Control Systems (C/STM32).</li>
+                            <li><strong>Caracal Helicopter:</strong> Implemented communication data protocol adapters.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 job-entry">
+                        <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-slate-200 border-2 border-white">
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                            <h3 class="text-md font-bold text-slate-700">Software Engineer</h3>
+                            <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-1 rounded">Jul 2017 –
+                                Jun 2018</span>
+                        </div>
+                        <div class="text-sm font-semibold text-slate-500 mb-3">PT Ciptakom Media Nusa</div>
+                        <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-slate-600">
+                            <li>Designed and architected Billing and Customer Management Web Applications (PHP/Yii1).
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 early-job-entry">
+                        <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-slate-200 border-2 border-white">
+                        </div>
+                        <h3 class="text-md font-bold text-slate-700 mb-3">Early Career Projects & Roles</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-semibold text-slate-800 text-sm">Freelance (Various
+                                        Clients)</span>
+                                    <span class="text-xs text-slate-500">2015 – 2017</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1">Developed Certification Admin Dashboards (PT
+                                    Serkolinas) and Admin Dashboards for Kesbangpol Kemendagri RI (PHP/Yii).</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-semibold text-slate-800 text-sm">PT Media Nusantara Digital
+                                        (Sindonews)</span>
+                                    <span class="text-xs text-slate-500">2014 – 2015</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1">Designed Mobile Apps for Android and Blackberry
+                                    using PhoneGAP.</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-semibold text-slate-800 text-sm">PT Media Nusantara Informasi
+                                        (Koran Sindo)</span>
+                                    <span class="text-xs text-slate-500">2012 – 2014</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1">Architected News Management and Advertising
+                                    Management systems (PHP/Yii).</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-baseline">
+                                    <span class="font-semibold text-slate-800 text-sm">CV Garis Merah / See World /
+                                        Al-Hasra</span>
+                                    <span class="text-xs text-slate-500">2006 – 2012</span>
+                                </div>
+                                <p class="text-xs text-slate-600 mt-1">
+                                    Built "Micro Job Online" with payment integration (Paypal/Moneybookers).<br>
+                                    Developed Telkom Divre 2 Potential Customer & Flexi Migration Apps.<br>
+                                    Maintained internal networks (Mikrotik) and web profiles.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Awards & Leadership -->
+            <section class="mt-10 page-break">
+                <h2
+                    class="text-xl font-bold text-slate-900 border-l-4 border-blue-600 pl-3 mb-4 uppercase tracking-wide">
+                    Awards & Leadership</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-sm">
+
+                    <!-- Awards -->
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                            Competitions
+                        </h3>
+                        <ul class="text-slate-800 space-y-1">
+                            <li><span class="font-semibold">Finalist, 6th National Web Team</span> (TMII, 2005)</li>
+                            <li><span class="font-semibold">First Round, 1st National Web Team</span> (Gonzaga, 2005)
+                            </li>
+                            <li><span class="font-semibold">1st Place, Jabodetabek Web Individual</span> (Yayasan Cakra
+                                Buana, 2003)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Leadership -->
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Organizations
+                        </h3>
+                        <ul class="text-slate-600 space-y-2">
+                            <li>
+                                <div class="font-semibold text-slate-800">President</div>
+                                <div class="text-xs">Karang Taruna Bina Karya Sawangan Elok</div>
+                            </li>
+                            <li>
+                                <div class="font-semibold text-slate-800">Vice President</div>
+                                <div class="text-xs">Ikatan Alumni SMA Al-Hasra</div>
+                            </li>
+                            <li>
+                                <div class="font-semibold text-slate-800">Super Moderator & Moderator IT</div>
+                                <div class="text-xs">Web Forum Plasa.com</div>
+                            </li>
+                            <li>
+                                <div class="font-semibold text-slate-800">Moderator Web Development</div>
+                                <div class="text-xs">HIMTI Gunadarma</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>
